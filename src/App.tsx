@@ -14,6 +14,7 @@ import MailId from "./pages/MailId";
 import AdminVersionInsert from "./pages/AdminVersionInsert";
 import Admin from "./pages/Admin";
 import AdminLayout from "./layouts/AdminLayouts";
+import Pena from "./pages/Pena";
 function App() {
   const withLayout = (LayoutComponent: any, ChildComponent: any) => {
     return (props: any) => (
@@ -54,6 +55,9 @@ function App() {
             <Route path=":mailId" element={<MailId />} />
           </Route>
         </Route>
+
+        <Route path="/pena" element={<Pena/>}></Route>
+
         <Route path="*" element={<h1>Not Found</h1>}></Route>
       </Routes>
     </>
