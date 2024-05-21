@@ -36,22 +36,22 @@ export default function MailboxPage() {
       <Card className="max-w-3xl mx-auto p-8 rounded-lg bg-opacity-75">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-3xl font-bold font-serif text-violet-900">
-            Mailbox
+            Version List
           </h1>
           <div className="flex space-x-4"></div>
         </div>
         <Divider className="border-violet-400 mb-4" />
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 mb-10">
           {versionData.map((version) => (
-            <div key={version.id} className="flex flex-col items-center">
+            <div key={version.id} className="flex items-center pb-2 border-b-1.5">
               <div>
                 <Image
                   src={version.image_url}
                   alt={version.title}
-                  className="size-12 mb-2"
+                  className="size-16 mb-2"
                 />
               </div>
-              <div>
+              <div className="ml-3 mb-3">
                 <p className="text-xs text-gray-400">{version.patch}</p>
                 <p className="text-sm text-gray-600">{version.title}</p>
                 <p className="text-xs text-gray-400">{version.content}</p>
